@@ -44,4 +44,5 @@ const ExerciseCard = ({ exercise }) => (
     </Typography>
   </Link>
 );
+
 export default ExerciseCard;

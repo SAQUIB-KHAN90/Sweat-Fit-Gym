@@ -1,11 +1,11 @@
-import React from "react";
-import { Box, Typography } from "@mui/material";
-import BordPart from "./BordPart";
+import React, { useContext } from "react";
 import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
-import { useContext } from "react";
-import LeftArrowIcon from "../assets/icons/left-arrow.png";
-import RightArrowIcon from "../assets/icons/right-arrow.png";
+import { Box, Typography } from "@mui/material";
+
 import ExerciseCard from "./ExerciseCard";
+import BodyPart from "./BodyPart";
+import RightArrowIcon from "../assets/icons/right-arrow.png";
+import LeftArrowIcon from "../assets/icons/left-arrow.png";
 
 const LeftArrow = () => {
   const { scrollPrev } = useContext(VisibilityContext);
@@ -37,7 +37,7 @@ const HorizontalScrollbar = ({ data, bodyParts, setBodyPart, bodyPart }) => (
         m="0 40px"
       >
         {bodyParts ? (
-          <BordPart item={item} setBodyPart={setBodyPart} bodyPart={bodyPart} />
+          <BodyPart item={item} setBodyPart={setBodyPart} bodyPart={bodyPart} />
         ) : (
           <ExerciseCard exercise={item} />
         )}

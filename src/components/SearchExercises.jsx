@@ -1,8 +1,7 @@
-import React from "react";
-import { useEffect, useState } from "react";
-import { Box, Stack, Button, TextField, Typography } from "@mui/material";
-import { fetchData } from "../utils/fetchData";
-import { exerciseOptions } from "../utils/fetchData";
+import React, { useEffect, useState } from "react";
+import { Box, Button, Stack, TextField, Typography } from "@mui/material";
+
+import { exerciseOptions, fetchData } from "../utils/fetchData";
 import HorizontalScrollbar from "./HorizontalScrollbar";
 
 const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
@@ -55,7 +54,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
         Awesome Exercises You <br /> Should Know
       </Typography>
       <Box position="relative" mb="72px">
-        {/* <TextField
+        <TextField
           height="76px"
           sx={{
             input: { fontWeight: "700", border: "none", borderRadius: "4px" },
@@ -67,8 +66,8 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
           onChange={(e) => setSearch(e.target.value.toLowerCase())}
           placeholder="Search Exercises"
           type="text"
-        /> */}
-        {/* <Button
+        />
+        <Button
           className="search-btn"
           sx={{
             bgcolor: "#FF2625",
@@ -83,7 +82,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
           onClick={handleSearch}
         >
           Search
-        </Button> */}
+        </Button>
       </Box>
       <Box sx={{ position: "relative", width: "100%", p: "20px" }}>
         <HorizontalScrollbar
@@ -96,4 +95,5 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
     </Stack>
   );
 };
+
 export default SearchExercises;

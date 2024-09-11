@@ -1,9 +1,9 @@
-import React from "react";
-import { useEffect, useState } from "react";
-import { Pagination } from "@mui/material";
+import React, { useEffect, useState } from "react";
+import Pagination from "@mui/material/Pagination";
 import { Box, Stack, Typography } from "@mui/material";
-import ExerciseCard from "./ExerciseCard";
+
 import { exerciseOptions, fetchData } from "../utils/fetchData";
+import ExerciseCard from "./ExerciseCard";
 import Loader from "./Loader";
 
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
